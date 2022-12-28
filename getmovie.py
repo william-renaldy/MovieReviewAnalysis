@@ -27,7 +27,7 @@ def GetMovie(name)->list:
     id = movie_name.movieID	
     year = movie_name.data["year"]
 
-    driver = webdriver.Chrome('chromedriver.exe',options=options)
+    driver = webdriver.Chrome(executable_path='chromedriver.exe',options=options)
     url = f'https://www.imdb.com/title/tt{id}/reviews?ref_=tt_ov_rt'
 
     driver.get(url)
