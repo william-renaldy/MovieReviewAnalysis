@@ -8,3 +8,4 @@ gunicorn
 scrapy
 IMDbPY
 selenium
+pandas
