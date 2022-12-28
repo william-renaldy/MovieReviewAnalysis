@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from scrapy.selector import Selector
 from selenium import webdriver 
-from selenium.webdriver import ChromeOptions
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import imdb
 from tqdm import tqdm
@@ -10,7 +10,7 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-options = ChromeOptions()
+options = Options()
 options.headless = True
 
 
