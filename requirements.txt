@@ -9,3 +9,4 @@ scrapy
 IMDbPY
 selenium
 pandas
+chromedriver-binary
