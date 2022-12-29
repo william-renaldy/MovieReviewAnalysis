@@ -33,7 +33,7 @@ with zipfile.ZipFile(latest_driver_zip, 'r') as zip_ref:
 #os.remove(latest_driver_zip)
 
 
-os.environ["PATH"] = "driver/chromedriver.exe"
+os.environ["PATH"] = "/driver/chromedriver.exe"
 
 warnings.filterwarnings("ignore")
 
