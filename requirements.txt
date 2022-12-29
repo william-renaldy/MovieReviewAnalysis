@@ -11,3 +11,6 @@ selenium
 pandas
 chromedriver-autoinstaller
 streamlit
+requests
+wget
+zipfile
