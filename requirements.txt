@@ -13,4 +13,4 @@ chromedriver-autoinstaller
 streamlit
 requests
 wget
-zipfile
+zipfile36
