@@ -11,8 +11,8 @@ import warnings
 warnings.filterwarnings("ignore")
 
 chromeOptions = webdriver.ChromeOptions()
-chromeOptions.binary_location = "/"
-chromeDriver = "/chromedriver.exe"
+chromeOptions.add_argument("--headless")
+chromeDriver = "chromedriver.exe"
 driver = webdriver.Chrome(chromeDriver, options=chromeOptions)
 
 
