@@ -42,7 +42,7 @@ options.add_argument("--start-maximized")
 options.add_argument("--headless")
 
 
-driver = webdriver.Chrome(executable_path=r"driver\chromedriver.exe",options=options)
+driver = webdriver.Chrome(executable_path=r"driver\chromedriver",options=options)
 
 
 def GetMovie(name)->list:
