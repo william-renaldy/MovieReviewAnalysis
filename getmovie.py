@@ -3,14 +3,16 @@ import pandas as pd
 from scrapy.selector import Selector
 from selenium import webdriver 
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import imdb
 from tqdm import tqdm
 import warnings
-import chromedriver_binary
+import chromedriver_py import binary_path
 
 warnings.filterwarnings("ignore")
 
+service_object = Service(binary_path)
 options = Options()
 options.headless = True
 
@@ -28,7 +30,7 @@ def GetMovie(name)->list:
     id = movie_name.movieID	
     year = movie_name.data["year"]
 
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(service=service_object,options=options)
     url = f'https://www.imdb.com/title/tt{id}/reviews?ref_=tt_ov_rt'
 
     driver.get(url)
