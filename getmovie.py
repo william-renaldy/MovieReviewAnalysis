@@ -32,6 +32,9 @@ with zipfile.ZipFile(latest_driver_zip, 'r') as zip_ref:
 # delete the zip file downloaded above
 #os.remove(latest_driver_zip)
 
+
+os.environ["PATH"] = "driver/chromedriver.exe"
+
 warnings.filterwarnings("ignore")
 
 options = webdriver.ChromeOptions()
