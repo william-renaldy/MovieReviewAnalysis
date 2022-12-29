@@ -10,11 +10,13 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-options = Options()
-options.headless = True
+chromeOptions = webdriver.ChromeOptions()
+chromeOptions.binary_location = "/chromedriver.exe"
+driver = webdriver.Chrome(chromeDriver, options=chromeOptions)
 
 
 def GetMovie(name)->list:
+    global driver
     ia = imdb.IMDb()
 
     search = ia.search_movie(name)
@@ -27,7 +29,6 @@ def GetMovie(name)->list:
     id = movie_name.movieID	
     year = movie_name.data["year"]
 
-    driver = webdriver.Chrome(executable_path='chromedriver.exe',options=options)
     url = f'https://www.imdb.com/title/tt{id}/reviews?ref_=tt_ov_rt'
 
     driver.get(url)
