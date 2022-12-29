@@ -9,4 +9,4 @@ scrapy
 IMDbPY
 selenium
 pandas
-chromedriver-binary
+chromedriver-py==108.0.5359.71
