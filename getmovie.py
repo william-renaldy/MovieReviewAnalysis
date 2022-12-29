@@ -18,7 +18,7 @@ options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 options.add_argument("--headless")
 
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=options)
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
 
 # import requests
