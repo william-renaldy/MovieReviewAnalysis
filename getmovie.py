@@ -7,15 +7,17 @@ from selenium.webdriver.common.by import By
 import imdb
 from tqdm import tqdm
 import warnings
-import chromedriver_binary
-import streamlit as st
+import chromedriver_autoinstaller
 
 warnings.filterwarnings("ignore")
 
-options = Options()
+options = webdriver.ChromeOptions()
+options.add_argument("--start-maximized")
 options.add_argument("--headless")
-options.binary_location = "chromedriver"
-driver = webdriver.Chrome('chromedriver',options=options)
+
+chromedriver_autoinstaller.install()
+
+driver = webdriver.Chrome(options=options)
 
 
 def GetMovie(name)->list:
