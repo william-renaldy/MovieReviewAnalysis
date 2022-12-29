@@ -9,6 +9,5 @@ scrapy
 IMDbPY
 selenium
 pandas
-chromedriver-py==108.0.5359.71
-chromedriver-binary
+chromedriver-autoinstaller
 streamlit
