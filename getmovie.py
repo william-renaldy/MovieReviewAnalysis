@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 
 options = Options()
 options.add_argument("--headless")
-
+options.binary_location = "chromedriver"
 driver = webdriver.Chrome('chromedriver',options=options)
 
 
