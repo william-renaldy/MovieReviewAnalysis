@@ -28,9 +28,9 @@ latest_driver_zip = wget.download(download_url,'chromedriver.zip')
 
 # extract the zip file
 with zipfile.ZipFile(latest_driver_zip, 'r') as zip_ref:
-    zip_ref.extractall() # you can specify the destination folder path here
+    zip_ref.extractall("driver") # you can specify the destination folder path here
 # delete the zip file downloaded above
-os.remove(latest_driver_zip)
+#os.remove(latest_driver_zip)
 
 warnings.filterwarnings("ignore")
 
