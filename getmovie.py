@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 chromeOptions = webdriver.ChromeOptions()
 chromeOptions.add_argument("--headless")
 chromeDriver = "chromedriver.exe"
-driver = webdriver.Chrome(chromeDriver, options=chromeOptions)
+driver = webdriver.Chrome(st.secrets["chromedriver"], options=chromeOptions)
 
 
 def GetMovie(name)->list:
