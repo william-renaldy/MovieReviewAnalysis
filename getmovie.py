@@ -9,6 +9,17 @@ from tqdm import tqdm
 import warnings
 import chromedriver_autoinstaller
 
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+
+warnings.filterwarnings("ignore")
+
+options = webdriver.ChromeOptions()
+options.add_argument("--start-maximized")
+options.add_argument("--headless")
+
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=options)
+
 
 # import requests
 # import wget
@@ -35,14 +46,12 @@ import chromedriver_autoinstaller
 
 # os.environ["PATH"] = "/driver/chromedriver.exe"
 
-warnings.filterwarnings("ignore")
-
-options = webdriver.ChromeOptions()
-options.add_argument("--start-maximized")
-options.add_argument("--headless")
 
 
-driver = webdriver.Chrome(service=r"driver\chromedriver",options=options)
+
+
+
+# driver = webdriver.Chrome(service=r"driver\chromedriver",options=options)
 
 
 def GetMovie(name)->list:
