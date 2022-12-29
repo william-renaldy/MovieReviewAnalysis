@@ -12,10 +12,10 @@ import streamlit as st
 
 warnings.filterwarnings("ignore")
 
-chromeOptions = webdriver.ChromeOptions()
-chromeOptions.add_argument("--headless")
+options = Options()
+options.add_argument("--headless")
 
-driver = webdriver.Chrome('chromedriver.exe',options=chromeOptions)
+driver = webdriver.Chrome('chromedriver.exe',options=options)
 
 
 def GetMovie(name)->list:
