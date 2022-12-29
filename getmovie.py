@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 import imdb
 from tqdm import tqdm
 import warnings
-import chromedriver_py import binary_path
+from chromedriver_py import binary_path
 
 warnings.filterwarnings("ignore")
 
