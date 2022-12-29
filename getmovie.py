@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 import imdb
 from tqdm import tqdm
 import warnings
+import streamlit as st
 
 warnings.filterwarnings("ignore")
 
