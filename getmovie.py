@@ -7,14 +7,15 @@ from selenium.webdriver.common.by import By
 import imdb
 from tqdm import tqdm
 import warnings
+import chromedriver_binary
 import streamlit as st
 
 warnings.filterwarnings("ignore")
 
 chromeOptions = webdriver.ChromeOptions()
 chromeOptions.add_argument("--headless")
-chromeDriver = "chromedriver.exe"
-driver = webdriver.Chrome(st.secrets["chromedriver"], options=chromeOptions)
+
+driver = webdriver.Chrome( options=chromeOptions)
 
 
 def GetMovie(name)->list:
