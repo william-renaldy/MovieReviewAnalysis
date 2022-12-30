@@ -15,13 +15,17 @@ import os
 
 warnings.filterwarnings("ignore")
 
-options = webdriver.ChromeOptions()
-options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+
+options = Options()
 options.add_argument("--headless")
 options.add_argument("--no-sandbox")
-options.add_argument("--disable-dev-sh-usage")
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--disable-gpu")
+options.add_argument("--disable-features=NetworkService")
+options.add_argument("--window-size=1920x1080")
+options.add_argument("--disable-features=VizDisplayCompositor")
 
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH",chrome_options=options))
+driver = webdriver.Chrome(options=options)
 
 
 # import requests
