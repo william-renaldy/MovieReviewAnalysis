@@ -4,5 +4,5 @@ libglib2.0-0
 libnss3
 libgconf-2-4
 libfontconfig1
-https://github.com/heroku/heroku-buildpack-google-chrome
-https://github.com/heroku/heroku-buildpack-chromedriver
+git+https://github.com/heroku/heroku-buildpack-google-chrome
+git+https://github.com/heroku/heroku-buildpack-chromedriver
