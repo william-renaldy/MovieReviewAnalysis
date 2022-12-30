@@ -20,7 +20,7 @@ options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-sh-usage")
 
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH",chrome_options=options)
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH",chrome_options=options))
 
 
 # import requests
