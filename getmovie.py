@@ -15,10 +15,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 warnings.filterwarnings("ignore")
 
 options = webdriver.ChromeOptions()
-options.add_argument("--start-maximized")
+options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-sh-usage")
 
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH",chrome_options=options)
 
 
 # import requests
