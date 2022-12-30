@@ -1,8 +1,2 @@
-freeglut3-dev
-libgtk2.0-dev
-libglib2.0-0
-libnss3
-libgconf-2-4
-libfontconfig1
-git+https://github.com/heroku/heroku-buildpack-google-chrome
-git+https://github.com/heroku/heroku-buildpack-chromedriver
+chromium
+chromium-driver
