@@ -12,7 +12,7 @@ movie = st.text_input("Enter the movie name: ").strip()
 
 
 if movie:
-    review,movie_name,year = getmovie.GetMovie(movie)
+    review,movie_name = getmovie.GetMovie(movie)
 
     if isinstance(review,list):
         X = processor.pre_process(review)
@@ -36,6 +36,6 @@ if movie:
 
 
     st.markdown(f"Movie Title: {movie_name}")
-    st.markdown(f"Year: {year}")
+    # st.markdown(f"Year: {year}")
 
     st.subheader(message)
