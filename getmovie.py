@@ -41,7 +41,7 @@ def GetMovie(name)->list:
         return "Movie Not Found"," - "," - "
 
     id = movie_name.movieID	
-    year = movie_name.data["year"]
+    # year = movie_name.data["year"]
 
     url = f'https://www.imdb.com/title/tt{id}/reviews?ref_=tt_ov_rt'
 
@@ -97,7 +97,7 @@ def GetMovie(name)->list:
 
     print(review_list)
 
-    return review_list,str(movie_name),year
+    return review_list,str(movie_name)
 
 
 if __name__ == "__main__":
